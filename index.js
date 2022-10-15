@@ -13,7 +13,7 @@ app.post("/main", async (req, res) => {
 
   const sheet = req.body.name;
 
-  const data = await getExcel("./src/engieData.xlsx", req.body.name);
+  const data = await getExcel("./src/engieData.xlsx", sheet);
 
   return res.send(data);
 
