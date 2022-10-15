@@ -3,7 +3,7 @@ import Data from "/data/index.js"
 function main(){
 
   postJson("/main", {name: "Main Natural Gas"}).then(data => {
-    console.log(data)
+    Data.factor(data, "naturalGas")
   })
 
 }
