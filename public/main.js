@@ -2,7 +2,7 @@ import Data from "/data/index.js"
 
 function main(){
 
-  console.log(Data.hello)
+  console.log(Data.factor(2, 4))
 
 }
 

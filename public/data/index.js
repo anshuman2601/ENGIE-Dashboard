@@ -1,5 +1,7 @@
+import factor from "./factor.js"
+
 const Data = {
-  hello: "hello world"
+  factor,
 }
 
 export default Data;
