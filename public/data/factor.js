@@ -6,12 +6,13 @@ const factors = {
 
 
 export default function factor(arr, type){
-  const length = arr.length;
   const ratio = factors[type];
-  const factoredData = new Array(length);
-  for(let i = 0; i < 100; i++){
-    factoredData[i] = arr[i][13].result*ratio;
+  const factoredData = {};
 
+
+  for(const [day, result] of Object.entries(arr)){
+
+    factoredData[day] = result*ratio;
   }
   return factoredData;
 }

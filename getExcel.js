@@ -3,6 +3,11 @@
 const ExcelJS = require('exceljs');
 
 
+/*
+
+uses excelJS and creates a 2D array 
+
+*/
 module.exports = async function (filepath, sheetName) {
     const workbook = new ExcelJS.Workbook();
     return data = workbook.xlsx.readFile(filepath).then(function () {
