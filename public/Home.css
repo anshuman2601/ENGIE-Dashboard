@@ -68,12 +68,16 @@
   width: 350px;
   height: 350px;
   margin: 0px 183px 0 auto;
+  background-color: #0000
+
 }
 
 .u-section-1 .u-shape-2 {
   width: 350px;
   height: 350px;
   margin: -350px auto 0 180px;
+  background-color: #0000
+
 }
 
 @media (max-width: 1199px) {

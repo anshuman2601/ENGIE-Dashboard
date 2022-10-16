@@ -5,7 +5,8 @@ export default function handle(arr){
 
     for(let i = 3; i < length; i++){
       const row = arr[i];
-      const result = row[mainCol]?.result;
+      const main = row[mainCol]?.result
+      const result = !isNaN(main) && main > 0? row[mainCol]?.result : 0;
 
       handledData[new Date(row[0]).toString().slice(0, -42)] = result;
     }

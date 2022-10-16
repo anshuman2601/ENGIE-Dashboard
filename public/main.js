@@ -6,9 +6,12 @@ const cached = {};
 const Enums = {
   //main purchase to fech factor
   //main generated?
-  naturalGas: "Main Natural Gas",
-  pellets: "Blr 10 Pellets",
-  coal: "Blr 11 Coal and Pellets",
+
+  naturalGas: ["Main Natural Gas", "Oakdale Nat Gas Est."],
+  pellets: ["Blr 10 Pellets"],
+  coal: ["Blr 11 Pellet Blend", "Blr 11 Coal Blend"],
+  oat: ["Blr 11 Oat Hulls"]
+
 
 
 
@@ -51,7 +54,6 @@ const emissionCircle = document.querySelector(".u-shape-1");
 const emissionCanvas = document.getElementById('emissionCanvas')
 const emissionValue = document.querySelector(".u-text-5");
 
-
 const eContext = energyCanvas.getContext("2d");
 const emContext = emissionCanvas.getContext("2d")
 
@@ -60,18 +62,23 @@ async function main(){
   const emissionChart = {data:[], labels: []};
   const usageChart = {data:[], labels: []};
 
-  for (const [key, value] of Object.entries(Enums)){
-    await Data.postJson("/main", {name: value}).then(data => {
-      const handled = Data.handle(data);
-      const emissions = Data.factor(handled, key);
-      cached[value] = handled;
+  for (const [key, values] of Object.entries(Enums)){
 
-      usageChart.labels.push(value);
-      usageChart.data.push(handled[date]);
+    for(const value of values) {
 
-      emissionChart.labels.push(value);
-      emissionChart.data.push(emissions[date]);
-    });
+      await Data.postJson("/main", {name: value}).then(data => {
+        const handled = Data.handle(data);
+        const emissions = Data.factor(handled, key);
+        cached[value] = handled;
+
+        usageChart.labels.push(value);
+        usageChart.data.push(handled[date]);
+
+        emissionChart.labels.push(value);
+        emissionChart.data.push(emissions[date]);
+      });
+
+    }
   }
   energyCircle.style.backgroundColor = "#0000";
   energyValue.innerText = 100;
@@ -79,7 +86,7 @@ async function main(){
   emissionCanvas.style.backgroundColor = "rgba";
   emissionValue.innerText = 200;
 
-
+  console.log(usageChart, emissionChart)
   Data.makeChart(usageChart, eContext);
   Data.makeChart(emissionChart, emContext);
 
