@@ -11,7 +11,7 @@ export default function factor(arr, type){
   const factoredData = new Array(length);
   for(let i = 0; i < 100; i++){
     factoredData[i] = arr[i][13].result*ratio;
-    console.log(factoredData[i])
+
   }
   return factoredData;
 }
