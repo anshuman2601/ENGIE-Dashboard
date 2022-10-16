@@ -9,7 +9,7 @@ const defaultColors = ['rgba(255, 99, 132, 1)',
 
 
 export default function makeChart(info, eContext){
-  console.log(defaultColors)
+
   const myChart = new Chart(eContext, {
       type: 'pie',
       data: {

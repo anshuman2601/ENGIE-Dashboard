@@ -5,8 +5,6 @@ const factors = {
     oat: (32+4.2+118170)/1000
 }
 
-console.log(factors)
-
 export default function factor(arr, type){
   const ratio = factors[type];
   const factoredData = {};

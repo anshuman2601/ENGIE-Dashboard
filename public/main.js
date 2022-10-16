@@ -1,6 +1,8 @@
 import Data from "/data/index.js"
 
-const date = new Date(" Oct 03 2021").toString().slice(0, -42)
+let input = " 07/03/2021"
+
+const date = new Date(input).toString().slice(0, -42)
 const cached = {};
 
 const Enums = {
@@ -86,7 +88,6 @@ async function main(){
   emissionCanvas.style.backgroundColor = "rgba";
   emissionValue.innerText = 200;
 
-  console.log(usageChart, emissionChart)
   Data.makeChart(usageChart, eContext);
   Data.makeChart(emissionChart, emContext);
 
