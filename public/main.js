@@ -13,7 +13,8 @@ const Enums = {
   naturalGas: ["Main Natural Gas", "Oakdale Nat Gas Est."],
   pellets: ["Blr 10 Pellets"],
   coal: ["Blr 11 Pellet Blend", "Blr 11 Coal Blend"],
-  oat: ["Blr 11 Oat Hulls"]
+  oat: ["Blr 11 Oat Hulls"],
+  purchased: ["Main Purch El", "Oakdale Purch El"]
 
 
 
