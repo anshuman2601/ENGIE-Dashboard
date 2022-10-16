@@ -2,7 +2,8 @@ const factors = {
     naturalGas: 53.0611, //kg
     pellets: (31875 + 32 + 4.2 + 67947.75)/1000, //g -> kg
     coal: (9328+11+1.6)/1000, // g -> kg
-    oat: (32+4.2+118170)/1000
+    oat: (32+4.2+118170)/1000, //kg
+    purchased: 81.248 //kg
 }
 
 export default function factor(arr, type){
