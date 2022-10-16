@@ -1,7 +1,7 @@
 # ENGIE-Dashboard
 
 
-#Running Instructions:
+## Running Instructions:
   - Install repositry through git <br />
   - cd into repositry <br />
   - run `node index.js` in terminal/command promt <br />
