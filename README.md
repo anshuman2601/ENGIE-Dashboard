@@ -2,8 +2,8 @@
 
 
 #Running Instructions:
-  -Install repositry through git
-  -cd into repositry 
-  -run `node index.js` in terminal/command promt
-  -click link `localhost:8080`
+  - Install repositry through git <br />
+  - cd into repositry <br />
+  - run `node index.js` in terminal/command promt <br />
+  - click link `localhost:8080`
   
